@@ -19,6 +19,22 @@
             <div id="statusbar" style="height:500vh"></div>
         </div>
     </div>
+     <script>
+        $(document).ready(function () {
+            var max_scroll = $(document).height() - $(window).height();
+            var win_w = $(window).width();
+
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+
+                var new_width = (win_w * scrolled) / max_scroll;
+                $("#statusbar").css({
+                    width: new_width
+                });
+            });
+        });
+
+    </script>
 
     <div id="middletext" style="height:20vh;background:coral">
         YOU NEED:
@@ -61,24 +77,9 @@
         src="https://unpkg.com/@twreporter/scrollable-image@1.0.0/dist/main-e7b3e42ea2d59f6d2ba8.bundle.js"></script>
 
 
-    <div id=footer style="height:20vh;background:coral">Asobi Asobase</div>
+    <div id=footer style="height:20vh;background:coral">TO BE A PRETTY GIRL :( </div>
 
-    <script>
-        $(document).ready(function () {
-            var max_scroll = $(document).height() - $(window).height();
-            var win_w = $(window).width();
-
-            $(window).scroll(function () {
-                var scrolled = $(window).scrollTop();
-
-                var new_width = (win_w * scrolled) / max_scroll;
-                $("#statusbar").css({
-                    width: new_width
-                });
-            });
-        });
-
-    </script>
+   
 </body>
 
 </html>
