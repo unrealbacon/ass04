@@ -86,6 +86,30 @@
 
     <div id=footer style="height:20vh;background:coral">TO BE A PRETTY GIRL</div>
 
+
+	<div style="height:600vh">
+	<div id="outer" class="sticky-top">
+		<div id="statusbar" style="height:500vh"></div>
+	</div>
+</div>
+	
+    <script>
+        $(document).ready(function () {
+            var max_scroll = $(document).height() - $(window).height();
+            var win_w = $(window).width();
+
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+
+                var new_width = (win_w * scrolled) / max_scroll;
+                $("#statusbar").css({
+                    width: new_width
+                });
+            });
+        });
+
+    </script>
+
     
 </body>
 
