@@ -1,49 +1,25 @@
 #outer {
     background-image: url(https://i.imgur.com/jJR6SlV.png);
     background-size: cover;
-    background-repeat: none;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* 修正為 no-repeat */
+    height: auto; /* 將高度改為自動 */
+    margin: 0;    /* 清除邊距 */
 }
 
 #statusbar {
-    /* 	position: relative; */
-    /* 	left: 0; */
     width: 0;
     background-image: url(https://i.imgur.com/eSlKHkO.png);
     background-size: cover;
-    background-repeat: none;
     background-attachment: fixed;
 }
 
-#footer {
-    background-color: black;
-    clear: both;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    padding: 0;
-    font-size: 20vh;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+#middletext, #footer {
+    margin: 0; /* 清除邊距 */
+    padding: 0; /* 清除填充 */
 }
 
-#banner {
-    background: coral;
-    height: 20vh;
-    position: relative;
-    color: white;
-    padding: 0;
-    font-size: 20vh;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
-
-#middletext {
-    background: coral;
-    height: 20vh;
-    position: relative;
-    color: white;
-    padding: 0;
-    font-size: 20vh;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+#outer::after {
+    content: "";
+    display: table;
+    clear: both; /* 清除浮動 */
 }
