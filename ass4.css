@@ -1,18 +1,25 @@
 #outer {
-    background-image: url(https://i.imgur.com/jJR6SlV.png);
+    background-image: url(https://i.imgur.com/jJR6SlV.png)class="responsive-image";
     background-size: cover;
     background-repeat: none;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 #statusbar {
     /* 	position: relative; */
     /* 	left: 0; */
     width: 0;
-    background-image: url(https://i.imgur.com/eSlKHkO.png);
+    background-image: url(https://i.imgur.com/eSlKHkO.png) class="responsive-image";
     background-size: cover;
     background-repeat: none;
     background-attachment: fixed;
+    overflow: auto;
+}
+
+.responsive-image {
+    width: 100%; /* 使圖片寬度適應其父元素 */
+    height: auto; /* 保持高寬比 */
 }
 
 #footer {
